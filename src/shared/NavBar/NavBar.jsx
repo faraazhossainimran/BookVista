@@ -1,7 +1,27 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+  const defaultImage = "https://i.ibb.co/j6TjQfR/7309681.jpg";
+  const navigate = useNavigate();
+  const handleLogOut = () => {
+    logOut()
+      .then(
+        // logut
+        Swal.fire(
+          "Log out succefully!",
+          "You are redirect to home page!",
+          "Success"
+        ),
+        navigate("/")
+      )
+      .catch((error) => {
+        Swal.fire("Error!", "Error while logging out!", "error");
+      });
+  };
   const navLinks = (
     <>
       <li className="text-xl">
@@ -50,10 +70,35 @@ const NavBar = () => {
         <div className="navbar-center hidden lg:flex">
           <ul className="menu menu-horizontal px-1">{navLinks}</ul>
         </div>
+
         <div className="navbar-end">
-          <a className="btn mr-8">
+          {user ? (
+            <div className="flex">
+              <div className="flex">
+                <h3 className="mt-3 text-xl font-semibold mr-4">
+                  {(user?.displayName) || "User"}
+                </h3>
+                <div className="avatar online mr-4">
+                  <div className="w-14 rounded-full">
+                    <img
+                      className=""
+                      src={user?.photoUrl || defaultImage}
+                    />
+                  </div>
+                </div>
+              </div>
+              <a className="btn mr-8">
+                <Link onClick={handleLogOut}>Sign Out</Link>
+              </a>
+            </div>
+          ) : (
+            <a className="btn mr-8">
+              <Link to={"/login"}>Login</Link>
+            </a>
+          )}
+          {/* <a className="btn mr-8">
             <Link to={"/login"}>Login</Link>
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

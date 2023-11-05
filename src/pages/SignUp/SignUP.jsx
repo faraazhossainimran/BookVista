@@ -1,22 +1,40 @@
 import { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const SignUP = () => {
-    const {signUp} = useContext(AuthContext)
+    const {signUp, userDetails} = useContext(AuthContext)
     const handleSignUp = (e) => {
         e.preventDefault()
         const form = e.target;
-        const name = form.name.value;
+        const displayName = form.name.value;
+        const photoUrl = form.photo.value;
         const email = form.email.value;
         const password = form.password.value;
-        console.log(name, email, password);
+        console.log(displayName, email, password, photoUrl);
         signUp(email, password)
         .then(result => {
             console.log(result.user);
+            Swal.fire(
+                'Signed in!',
+                'You have signed in, Great!',
+                'success'
+              )
+            userDetails(displayName, photoUrl)
+            .then(()=>{
+                // profile updated
+            })
+            .catch(error => {
+                console.log();
+            })
         })
         .catch(error => {
-            console.log(error);
+            Swal.fire(
+                'Hold on!',
+                'Something went wrong',
+                'error'
+              )
         })
     }
   return (
@@ -39,6 +57,18 @@ const SignUP = () => {
                   type="text"
                   name="name"
                   placeholder="Name"
+                  className="input input-bordered"
+                  required
+                />
+              </div>
+              <div className="form-control">
+                <label className="label">
+                  <span className="label-text">Photo URL</span>
+                </label>
+                <input
+                  type="text"
+                  name="photo"
+                  placeholder="Photo URL"
                   className="input input-bordered"
                   required
                 />

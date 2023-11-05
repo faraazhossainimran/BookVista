@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../providers/AuthProviders";
+import Swal from "sweetalert2";
 
 const Login = () => {
-    const {login} = useContext(AuthContext)
+    const {login, googleLogin} = useContext(AuthContext)
     const handleLoginIn = (e) => {
         e.preventDefault()
         const form = e.target;
@@ -12,7 +13,24 @@ const Login = () => {
         console.log(email, password);
         login(email, password)
         .then(result => {
-            console.log(result.user);
+            Swal.fire(
+                'Logged in!',
+                'You have Logged in, Great!',
+                'success'
+              )
+        })
+        .catch(error => {
+            Swal.fire(
+                'Something wrong!',
+                'Your password or email is not correct',
+                'error'
+              )
+        })
+    }
+    const handleGoogleLogin = () => {
+        googleLogin()
+        .then(()=> {
+            // pop up
         })
         .catch(error => {
             console.log(error);
@@ -67,7 +85,7 @@ const Login = () => {
             </p>
             <div className="divider mx-8">OR</div>
                 <div className="form-control mx-8 mb-8">
-                  <button className="btn">
+                  <button className="btn" onClick={handleGoogleLogin}>
                     <img
                       className="w-[37px]"
                       src="https://i.ibb.co/dBTSL19/icons8-google-48.png"
