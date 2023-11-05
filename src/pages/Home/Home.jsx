@@ -1,9 +1,14 @@
+import Banner from "../../components/Banner/Banner"
+import Rooms from "../Rooms/Rooms"
+
 
 
 const Home = () => {
     return (
         <div>
-            <h1 className="3xl">HomePage</h1>
+           <Banner></Banner>
+           <Rooms></Rooms>
+ 
         </div>
     )
 }
