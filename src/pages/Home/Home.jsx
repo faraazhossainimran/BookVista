@@ -5,6 +5,7 @@ import RoomsCarousel from "../../components/RoomsCarousel/RoomsCarousel"
 import Rooms from "../Rooms/Rooms"
 import FeaturedRooms from "./FeaturedRooms"
 import ImageRorate from "./ImageRorate"
+import NewsLetter from "./NewsLetter"
 
 
 
@@ -13,6 +14,7 @@ const Home = () => {
         <div>
            <Banner></Banner>
            <Promotions></Promotions>
+           <NewsLetter></NewsLetter>
            <FeaturedRooms></FeaturedRooms>
            <RoomsCarousel></RoomsCarousel>
         </div>
