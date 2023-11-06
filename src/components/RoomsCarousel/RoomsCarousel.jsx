@@ -1,6 +1,6 @@
 const RoomsCarousel = () => {
   return (
-    <div>
+    <div className="relative">
       <div className="carousel grid md:grid-cols-4 carousel-center">
         <div className="carousel-item relative">
           <img
