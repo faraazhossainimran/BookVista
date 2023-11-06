@@ -78,7 +78,7 @@ const Login = () => {
               </div>
             </form>
             <p className="py-4 text-center text-lg -mt-8">
-              New to Car Doctor?{" "}
+              New to BookVista?{" "}
               <Link to={"/signup"} className="text-white-600 font-semibold text-white-600">
                 Sign Up
               </Link>

@@ -35,7 +35,7 @@ const Promotions = () => {
               <p className="text-5xl text-white pt-16 md:ml-20">
                 <GiTowel></GiTowel>
               </p>
-              <h3 className="text-3xl text-white pt-4">Towels</h3>
+              <h3 className="text-3xl text-white pt-4">Brand New Towels</h3>
               <p className="text-white mt-2">
               Here is the lorem ipsum passage followed by Boparai's
               </p>
