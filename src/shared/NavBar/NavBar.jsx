@@ -36,8 +36,15 @@ const NavBar = () => {
     </>
   );
   return (
-    <div>
-      <div className="navbar bg-base-100">
+    <nav className="relative sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-500">
+      <div className="navbar">
+        <div
+          className="absolute"
+          style={{
+            backgroundImage:
+              "url(https://images.unsplash.com/photo-1496417263034-38ec4f0b665a?auto=format&fit=crop&q=80&w=2071&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+          }}
+        ></div>
         <div className="navbar-start">
           <div className="dropdown">
             <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -58,7 +65,7 @@ const NavBar = () => {
             </label>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
+              className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
             >
               {navLinks}
             </ul>
@@ -76,23 +83,23 @@ const NavBar = () => {
             <div className="flex">
               <div className="flex">
                 <h3 className="mt-3 text-xl font-semibold mr-4">
-                  {(user?.displayName) || "User"}
+                  {user?.displayName || "User"}
                 </h3>
                 <div className="avatar online mr-4">
                   <div className="w-14 rounded-full">
                     <img
                       className=""
-                      src={user?.photoUrl || defaultImage}
+                      src={(user && user?.photoUrl) || defaultImage}
                     />
                   </div>
                 </div>
               </div>
-              <a className="btn mr-8">
-                <Link onClick={handleLogOut}>Sign Out</Link>
+              <a className="p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold">
+                <Link onClick={handleLogOut} >Sign Out</Link>
               </a>
             </div>
           ) : (
-            <a className="btn mr-8">
+            <a className="mr-4 p-2 px-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold">
               <Link to={"/login"}>Login</Link>
             </a>
           )}
@@ -101,7 +108,7 @@ const NavBar = () => {
           </a> */}
         </div>
       </div>
-    </div>
+    </nav>
   );
 };
 

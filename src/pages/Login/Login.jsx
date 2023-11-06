@@ -74,7 +74,7 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-              <input type="submit" className="p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" value="Login"/>
+              <input type="submit" className="b-0 p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" value="Login"/>
               </div>
             </form>
             <p className="py-4 text-center text-lg -mt-8">
