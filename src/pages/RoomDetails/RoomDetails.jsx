@@ -1,5 +1,7 @@
 import { useLoaderData } from "react-router-dom"
 import RoomDetail from "../../components/RoomDetail/RoomDetail";
+import RoomDetailsCarousel from "./RoomDetailsCarousel";
+import RoomsCarousel from "../../components/RoomsCarousel/RoomsCarousel";
 
 
 const RoomDetails = () => {
@@ -7,7 +9,7 @@ const RoomDetails = () => {
     const {_id} = roomDetails;
     return (
         <div>
-            {_id}
+           <RoomDetailsCarousel roomDetails={roomDetails}></RoomDetailsCarousel>
         </div>
     )
 }

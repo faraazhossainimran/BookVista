@@ -36,7 +36,7 @@ const NavBar = () => {
     </>
   );
   return (
-    <nav className="relative sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30 border-b border-gray-500">
+    <nav className="relative sticky top-0 z-10 backdrop-filter backdrop-blur-lg bg-opacity-30">
       <div className="navbar">
         <div
           className="absolute"
