@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const FeaturedRoom = ({featuredRoom}) => {
-    const {room_description, price_per_night, room_image, room_size } = featuredRoom;
+    const {room_description, price_per_night, room_image, room_size, _id } = featuredRoom;
   return (
     <div className="">
       <div className="relative">
@@ -16,7 +17,7 @@ const FeaturedRoom = ({featuredRoom}) => {
           <h2 className="card-title mt-4">{room_description}</h2>
           <p className=" text-lg">Price per night: {price_per_night}</p>
           <div className="">
-            <button className="p-2 mt-4 px-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold">See More Details</button>
+            <button className="p-2 mt-4 px-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold"><Link to={`http://localhost:5173/rooms/${_id}`}>See More Details</Link></button>
           </div>
         </div>
       </div>

@@ -4,11 +4,10 @@ import FeaturedRoom from '../../components/FeaturedRoom/FeaturedRoom'
 const FeaturedRooms = () => {
     const [featuredRooms, setFeaturedRooms] = useState([])
     useEffect(()=>{
-        fetch('rooms.json')
+        fetch('http://localhost:5000/rooms')
         .then(res => res.json())
         .then(data => {
             setFeaturedRooms(data)
-          console.log(data);
         })
     },[])
     return (

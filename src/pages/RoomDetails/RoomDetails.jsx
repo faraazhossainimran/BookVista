@@ -1,9 +1,13 @@
+import { useLoaderData } from "react-router-dom"
+import RoomDetail from "../../components/RoomDetail/RoomDetail";
 
 
 const RoomDetails = () => {
+    const roomDetails = useLoaderData()
+    const {_id} = roomDetails;
     return (
         <div>
-            <h1>This is room details page</h1>
+            {_id}
         </div>
     )
 }
