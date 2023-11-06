@@ -1,10 +1,10 @@
 const Room = ({room}) => {
-    const {room_description, price_per_night, room_image, room_size } = room;
+    const {room_description, price_per_night, room_image, room_size, _id } = room;
   return (
     <div>
       <div className="relative">
           <img
-          className="h-[600px] object-cover"btn btn-primary mt-4 ml-4
+          className="h-[600px] object-cover"
             src={room_image}
             alt={`image of ${room_description}`}
           />
@@ -24,4 +24,3 @@ const Room = ({room}) => {
 };
 
 export default Room;
-// btn btn-primary mt-4 ml-4
