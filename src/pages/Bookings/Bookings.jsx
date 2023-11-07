@@ -4,7 +4,7 @@ import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProviders";
 const Bookings = () => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   console.log(user);
   const [bookingsDetails, setBookingsDetails] = useState([]);
   const url = `http://localhost:5000/bookings?email=${user?.email}`;
@@ -34,7 +34,9 @@ const Bookings = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
-            const remainingBookings = bookingsDetails.filter(booking => booking._id !== id)
+            const remainingBookings = bookingsDetails.filter(
+              (booking) => booking._id !== id
+            );
             setBookingsDetails(remainingBookings);
           })
           .catch((error) => {
@@ -46,33 +48,46 @@ const Bookings = () => {
     });
   };
   console.log(bookingsDetails);
+  // const noRoomBook = 
+  //   <>
+
+  //   </>
+  // ;
   return (
     <div className="container mx-auto py-12">
-      <div className="overflow-x-auto">
-        <table className="table">
-          {/* head */}
-          <thead>
-            <tr>
-              <th></th>
-              <th className="text-lg">Room Booked</th>
-              <th className="text-lg">$Price</th>
-              <th className="text-lg">Size</th>
-              <th className="text-lg">Date</th>
-            </tr>
-          </thead>
-          <tbody>
-            {/* row 1 */}
-            {bookingsDetails.map((booking) => (
-              <Booking
-                key={booking._id}
-                booking={booking}
-                handleBookingDelete={handleBookingDelete}
-              ></Booking>
-            ))}
-          </tbody>
-          {/* foot */}
-        </table>
-      </div>
+      {bookingsDetails.length > 0 ? (
+        <>
+          <div className="overflow-x-auto">
+            <table className="table">
+              {/* head */}
+              <thead>
+                <tr>
+                  <th></th>
+                  <th className="text-lg">Room Booked </th>
+                  <th className="text-lg">$Price</th>
+                  <th className="text-lg">Size</th>
+                  <th className="text-lg">Date</th>
+                </tr>
+              </thead>
+              <tbody>
+                {/* row 1 */}
+                {bookingsDetails.map((booking) => (
+                  <Booking
+                    key={booking._id}
+                    booking={booking}
+                    handleBookingDelete={handleBookingDelete}
+                  ></Booking>
+                ))}
+              </tbody>
+              {/* foot */}
+            </table>
+          </div>
+        </>
+      ) : 
+      <h1 className="text-3xl text-center">
+      No rooms booked yet. Please book a room
+    </h1>
+      }
     </div>
   );
 };
