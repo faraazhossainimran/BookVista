@@ -1,4 +1,8 @@
+import { useContext } from "react";
+import { AuthContext } from "../../providers/AuthProviders";
+
 const RoomDetail = ({ roomDetails }) => {
+  const {user} = useContext(AuthContext)
   const {
     room_description,
     price_per_night,
@@ -7,17 +11,20 @@ const RoomDetail = ({ roomDetails }) => {
     _id,
     room_details,
   } = roomDetails;
+  const userEmail = user ? user.email : '';
 const handleRoomBooking = () => {
     const bookedRoom = {
         bookedRoom_room_description: room_description,
         bookedRoom_Price_per_night: price_per_night,
         bookedRoom_room_image: room_image,
         bookedRoom_size: room_size,
+        userEmail,
     }
+    console.log(bookedRoom);
     fetch('http://localhost:5000/bookings', {
         method: 'POST',
         headers: {
-            'content-type' : 'application/type'
+            'content-type' : 'application/json'
         },
         body: JSON.stringify(bookedRoom)
     })
