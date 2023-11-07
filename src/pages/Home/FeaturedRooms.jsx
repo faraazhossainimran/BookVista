@@ -10,6 +10,7 @@ const FeaturedRooms = () => {
             setFeaturedRooms(data)
         })
     },[])
+    const featuredRoomsThree = featuredRooms.slice(0,3)
     return (
         <div className='container mx-auto my-12'>
             <div className='m-8'>
@@ -18,7 +19,7 @@ const FeaturedRooms = () => {
             </div>
             <div className='grid m-4 md:m-0 md:grid-cols-3 md:gap-24 gap-8'>
             
-            {featuredRooms.map(featuredRoom => <FeaturedRoom key={featuredRoom.room_id} featuredRoom={featuredRoom}></FeaturedRoom>)}
+            {featuredRoomsThree.map(featuredRoom => <FeaturedRoom key={featuredRoom.room_id} featuredRoom={featuredRoom}></FeaturedRoom>)}
         </div>
         </div>
     )

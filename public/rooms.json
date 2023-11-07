@@ -1,6 +1,5 @@
 [
       {
-        "room_id": 1,
         "room_description": "Deluxe Double Room with Ocean View",
         "price_per_night": 250,
         "room_size": "400 sq. ft",
@@ -35,7 +34,6 @@
         "room_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
-        "room_id": 2,
         "room_description": "Luxury Suite with Private Pool",
         "price_per_night": 450,
         "room_size": "600 sq. ft",
@@ -70,7 +68,40 @@
         "room_image": "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
       },
       {
-        "room_id": 3,
+        "room_description": "Luxury Suite with Hills view",
+        "price_per_night": 490,
+        "room_size": "600 sq. ft",
+        "availability": false,
+        "room_images": [
+          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        ],
+        "special_offers": [
+            {
+              "offer_title": "20% Off for Weeklong Stays",
+              "offer_description": "Book a weeklong stay and get 20% off your total bill."
+            },
+            {
+              "offer_title": "Early Bird Discount",
+              "offer_description": "Book your stay 30 days in advance and get 15% off."
+            }
+          ],
+        "reviews": [
+          {
+            "user_name": "Emily Johnson",
+            "rating": 4,
+            "review_text": "The suite was fabulous, but I wish it was available during my preferred dates."
+          },
+          {
+            "user_name": "David Williams",
+            "rating": 4.5,
+            "review_text": "A dream suite for a romantic getaway."
+          }
+        ],
+        "room_image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      },
+      {
         "room_description": "Luxury Suite with Hills view",
         "price_per_night": 490,
         "room_size": "600 sq. ft",
