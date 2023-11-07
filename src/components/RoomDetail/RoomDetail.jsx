@@ -1,5 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
+import Reviews from "../Reviews/Reviews";
 
 const RoomDetail = ({ roomDetails }) => {
   const {user} = useContext(AuthContext)
@@ -35,11 +36,11 @@ const handleRoomBooking = () => {
 }
   return (
     <div>
-      <div className="container mx-auto pt-12 w-[1200px]">
+      <div className="container mx-auto pt-12  w-[1200px]">
         {/* <p className="text-center py-2 text-xl">Size: {room_size}</p> */}
         <div className="grid grid-cols-4 gap-6">
-          <div className="col-span-3">
-            <div className=" card-compact ">
+          <div className="col-span-3 ">
+            <div className=" card-compact p-4 bg-[#f5f5fe] ">
               <figure>
                 <img
                   className="md:h-[700px] object-cover"
@@ -48,15 +49,16 @@ const handleRoomBooking = () => {
                 />
               </figure>
               <div className="">
-                <h1 className="text-3xl font-semibold  py-4">
+                <h1 className="text-3xl font-semibold py-4">
                   {room_description}
                 </h1>
                 <p className="text-lg my-2">{room_details}</p>
               </div>
             </div>
+            <Reviews></Reviews>
           </div>
           <div className="">
-          <ul className="menu bg-base-200 md:w-96 rounded-box ">
+          <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box ">
             <li className="text-2xl font-semibold p-2">{room_description}</li>
             <li>
               <span className="font-semibold text-lg">Price: {price_per_night}</span>
@@ -67,9 +69,9 @@ const handleRoomBooking = () => {
             <li>
             {/* <span className="font-semibold text-lg">Details: {room_details}</span> */}
             </li>
-            <button className="btn" onClick={()=> handleRoomBooking()}>Book Now</button>
+            <button className="btn p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" onClick={()=> handleRoomBooking()}>Book Now</button>
           </ul>
-          <ul className="menu bg-base-200 md:w-96 rounded-box mt-12 ">
+          <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box mt-12 ">
             <li className="text-2xl font-semibold p-2">Need Assistant?</li>
             <li>
               <span className="font-semibold text-lg">Call at: 01923456789</span>
