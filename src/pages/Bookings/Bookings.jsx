@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import {Helmet} from "react-helmet";
 import Booking from "../../components/Booking/Booking";
 import { useContext, useEffect, useState } from "react";
 import Swal from "sweetalert2";
@@ -45,13 +45,17 @@ const Bookings = () => {
     });
   };
   console.log(bookingsDetails);
-  // const noRoomBook = 
+  // const noRoomBook =
   //   <>
 
   //   </>
   // ;
   return (
     <div className="container mx-auto py-12">
+      <Helmet>
+        <meta charSet="utf-8" />
+        <title>My Bookings</title>
+      </Helmet>
       {bookingsDetails.length > 0 ? (
         <>
           <div className="overflow-x-auto">
@@ -80,11 +84,11 @@ const Bookings = () => {
             </table>
           </div>
         </>
-      ) : 
-      <h1 className="text-3xl text-center">
-      No rooms booked yet. Please book a room
-    </h1>
-      }
+      ) : (
+        <h1 className="text-3xl text-center">
+          No rooms booked yet. Please book a room
+        </h1>
+      )}
     </div>
   );
 };

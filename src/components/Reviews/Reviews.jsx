@@ -2,9 +2,11 @@ import { useContext, useEffect, useState } from "react";
 import { AiFillStar } from "react-icons/ai";
 import Review from "./Review";
 import Swal from "sweetalert2";
+import { AuthContext } from "../../providers/AuthProviders";
 
 AiFillStar;
 const Reviews = ({ _id }) => {
+  const {user} = useContext(AuthContext)
   const [postedReviews, setPostedReviews] = useState([]);
   const url = `http://localhost:5000/reviews/${_id}`;
   useEffect(() => {
@@ -56,32 +58,37 @@ const Reviews = ({ _id }) => {
         Post a Review
         <form onSubmit={handleReviews}>
           <input
+          required
             type="text"
             name="username"
             placeholder="Username"
             className="input input-bordered w-full py-2 mt-4"
           />
           <input
+          required
             type="text"
             name="photo"
             placeholder="Photo url"
             className="input input-bordered w-full py-2 mt-4"
           />
           <input
+            required
             type="number"
             name="rating"
             placeholder="give rating"
             className="input input-bordered w-full py-2 mt-4"
           />
           <textarea
+          required
             placeholder="Comment"
             name="review"
             className="textarea textarea-bordered textarea-xs w-full py-2 mt-4"
           ></textarea>
           <input
-            className="btn input input-bordered w-full py-2 mt-4"
+            className={!user?.email ? 'btn mt-4' : 'btn b-0 p-4 mt-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold'}
             type="submit"
             value="Add Review"
+            disabled={!user?.email ? true : false}
           ></input>
         </form>
       </h2>
