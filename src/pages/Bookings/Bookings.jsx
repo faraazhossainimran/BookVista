@@ -5,10 +5,8 @@ import Swal from "sweetalert2";
 import { AuthContext } from "../../providers/AuthProviders";
 const Bookings = () => {
   const { user } = useContext(AuthContext);
-  console.log(user);
   const [bookingsDetails, setBookingsDetails] = useState([]);
   const url = `http://localhost:5000/bookings?email=${user?.email}`;
-  console.log(url);
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())

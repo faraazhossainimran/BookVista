@@ -1,9 +1,11 @@
 import { useContext } from "react";
 import { AuthContext } from "../../providers/AuthProviders";
 import Reviews from "../Reviews/Reviews";
+import { Link } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const RoomDetail = ({ roomDetails }) => {
-  const {user} = useContext(AuthContext)
+  const { user } = useContext(AuthContext);
   const {
     room_description,
     price_per_night,
@@ -12,28 +14,32 @@ const RoomDetail = ({ roomDetails }) => {
     _id,
     room_details,
   } = roomDetails;
-  const userEmail = user ? user.email : '';
-const handleRoomBooking = () => {
+  const userEmail = user ? user.email : "";
+  const handleRoomBooking = () => {
     const bookedRoom = {
-        bookedRoom_room_description: room_description,
-        bookedRoom_Price_per_night: price_per_night,
-        bookedRoom_room_image: room_image,
-        bookedRoom_size: room_size,
-        userEmail,
-    }
+      bookedRoom_room_description: room_description,
+      bookedRoom_Price_per_night: price_per_night,
+      bookedRoom_room_image: room_image,
+      bookedRoom_size: room_size,
+      userEmail,
+    };
     console.log(bookedRoom);
-    fetch('http://localhost:5000/bookings', {
-        method: 'POST',
-        headers: {
-            'content-type' : 'application/json'
-        },
-        body: JSON.stringify(bookedRoom)
+    fetch("http://localhost:5000/bookings", {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+      },
+      body: JSON.stringify(bookedRoom),
     })
-    .then(res => res.json())
-    .then(data => {
-        console.log(data);
-    })
-}
+      .then((res) => res.json())
+      .then((data) => {
+        Swal.fire(
+          'Room Booked!',
+          `You have booked ${bookedRoom_room_description} which cost $ ${bookedRoom_Price_per_night}`,
+          'success'
+        )
+      });
+  };
   return (
     <div>
       <div className="container mx-auto pt-12  w-[1200px]">
@@ -58,31 +64,41 @@ const handleRoomBooking = () => {
             <Reviews></Reviews>
           </div>
           <div className="">
-          <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box ">
-            <li className="text-2xl font-semibold p-2">{room_description}</li>
-            <li>
-              <span className="font-semibold text-lg">Price: {price_per_night}</span>
-            </li>
-            <li>
-            <span className="font-semibold text-lg">Size: {room_size}</span>
-            </li>
-            <li>
-            {/* <span className="font-semibold text-lg">Details: {room_details}</span> */}
-            </li>
-            <button className="btn p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" onClick={()=> handleRoomBooking()}>Book Now</button>
-          </ul>
-          <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box mt-12 ">
-            <li className="text-2xl font-semibold p-2">Need Assistant?</li>
-            <li>
-              <span className="font-semibold text-lg">Call at: 01923456789</span>
-            </li>
-            <li>
-            {/* <span className="font-semibold text-lg">Size: {room_size}</span> */}
-            </li>
-            <li>
-            {/* <span className="font-semibold text-lg">Details: {room_details}</span> */}
-            </li>
-          </ul>
+            <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box ">
+              <li className="text-2xl font-semibold p-2">{room_description}</li>
+              <li>
+                <span className="font-semibold text-lg">
+                  Price: {price_per_night}
+                </span>
+              </li>
+              <li>
+                <span className="font-semibold text-lg">Size: {room_size}</span>
+              </li>
+              <li>
+                {/* <span className="font-semibold text-lg">Details: {room_details}</span> */}
+              </li>
+              <Link
+                className="btn p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold"
+                onClick={() => handleRoomBooking()}
+                to={user?.email ? "/bookings" : "/login"}
+              >
+                Book Now
+              </Link>
+            </ul>
+            <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box mt-12 ">
+              <li className="text-2xl font-semibold p-2">Need Assistant?</li>
+              <li>
+                <span className="font-semibold text-lg">
+                  Call at: 01923456789
+                </span>
+              </li>
+              <li>
+                {/* <span className="font-semibold text-lg">Size: {room_size}</span> */}
+              </li>
+              <li>
+                {/* <span className="font-semibold text-lg">Details: {room_details}</span> */}
+              </li>
+            </ul>
           </div>
         </div>
       </div>
