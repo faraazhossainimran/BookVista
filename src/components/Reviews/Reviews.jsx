@@ -18,11 +18,13 @@ const Reviews = ({ _id }) => {
     e.preventDefault();
     const form = e.target;
     const user_name = form.username.value;
+    const userPhoto = form.photo.value;
     const rating = form.rating.value;
     const review_text = form.review.value;
     const reviewData = {
       user_name,
       rating,
+      userPhoto,
       review_text,
     };
     fetch(`http://localhost:5000/bookings/${_id}`, {
@@ -57,6 +59,12 @@ const Reviews = ({ _id }) => {
             type="text"
             name="username"
             placeholder="Username"
+            className="input input-bordered w-full py-2 mt-4"
+          />
+          <input
+            type="text"
+            name="photo"
+            placeholder="Photo url"
             className="input input-bordered w-full py-2 mt-4"
           />
           <input
