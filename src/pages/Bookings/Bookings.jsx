@@ -11,7 +11,6 @@ const Bookings = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setBookingsDetails(data);
       });
   }, []);

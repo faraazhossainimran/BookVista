@@ -5,67 +5,49 @@
         "room_size": "400 sq. ft",
         "availability": true,
         "room_images": [
-          "https://images.unsplash.com/photo-1586611292717-f828b167408c?auto=format&fit=crop&q=80&w=1974&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1582719508461-905c673771fd?auto=format&fit=crop&q=80&w=1925&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "https://i.ibb.co/sCRpkgQ/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg",
+          "https://i.ibb.co/mH3hmM9/ashley-byrd-VLHNf-KF1-Uec-unsplash.jpg",
+          "https://i.ibb.co/QvMfcjg/barun-ghosh-TD00-Eblx-BRQ-unsplash.jpg"
         ],
-        "special_offers": [
-          {
-            "offer_title": "20% Off for Weeklong Stays",
-            "offer_description": "Book a weeklong stay and get 20% off your total bill."
-          },
-          {
-            "offer_title": "Early Bird Discount",
-            "offer_description": "Book your stay 30 days in advance and get 15% off."
-          }
-        ],
+        "special_offers": false,
         "reviews": [
           {
-            "user_name": "John Doe",
+            "user_name": "JohnDoe",
             "rating": 4.5,
             "review_text": "The room was amazing with a breathtaking view of the ocean!"
           },
           {
-            "user_name": "Jane Smith",
+            "user_name": "JaneSmith",
             "rating": 5,
             "review_text": "This room exceeded my expectations. I will definitely come back."
           }
         ],
-        "room_image": "https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "room_image": "https://i.ibb.co/jhftyvR/vojtech-bruzek-Yrxr3bs-Pd-S0-unsplash.jpg"
       },
       {
-        "room_description": "Luxury Suite with Private Pool",
+        "room_description": "The Grand Room with Private Pool",
         "price_per_night": 450,
         "room_size": "600 sq. ft",
         "availability": false,
         "room_images": [
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "https://i.ibb.co/hdyg4Zv/visualsofdana-T5p-L6ci-En-I-unsplash.jpg",
+          "https://i.ibb.co/pjvLRNg/chris-tweten-z4tz-Nzp-Yl-Jo-unsplash.jpg",
+          "https://i.ibb.co/R34b7xV/steven-ungermann-a-RT5-UCf2-MYY-unsplash.jpg"
         ],
-        "special_offers": [
-            {
-              "offer_title": "20% Off for Weeklong Stays",
-              "offer_description": "Book a weeklong stay and get 20% off your total bill."
-            },
-            {
-              "offer_title": "Early Bird Discount",
-              "offer_description": "Book your stay 30 days in advance and get 15% off."
-            }
-          ],
+        "special_offers": false,
         "reviews": [
           {
-            "user_name": "Emily Johnson",
+            "user_name": "EmilyJohnson",
             "rating": 4,
             "review_text": "The suite was fabulous, but I wish it was available during my preferred dates."
           },
           {
-            "user_name": "David Williams",
+            "user_name": "DavidWilliams",
             "rating": 4.5,
             "review_text": "A dream suite for a romantic getaway."
           }
         ],
-        "room_image": "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "room_image": "https://i.ibb.co/jgn3sR7/jesse-gardner-Ow-Wb-UOIbh-DY-unsplash.jpg"
       },
       {
         "room_description": "Luxury Suite with Hills view",
@@ -73,67 +55,49 @@
         "room_size": "600 sq. ft",
         "availability": false,
         "room_images": [
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "https://i.ibb.co/2Fx3gvQ/frames-for-your-heart-z-SG-kd-L6vw-unsplash.jpg",
+          "https://i.ibb.co/R6C6vKs/cloris-ying-QJMKyrud5l8-unsplash-1.jpg",
+          "https://i.ibb.co/gjj6SMP/paul-szewczyk-t-Yd9-Aa-Yofn8-unsplash.jpg"
         ],
-        "special_offers": [
-            {
-              "offer_title": "20% Off for Weeklong Stays",
-              "offer_description": "Book a weeklong stay and get 20% off your total bill."
-            },
-            {
-              "offer_title": "Early Bird Discount",
-              "offer_description": "Book your stay 30 days in advance and get 15% off."
-            }
-          ],
+        "special_offers": true,
         "reviews": [
           {
-            "user_name": "Emily Johnson",
+            "user_name": "Emilyson",
             "rating": 4,
             "review_text": "The suite was fabulous, but I wish it was available during my preferred dates."
           },
           {
-            "user_name": "David Williams",
+            "user_name": "Davilliams",
             "rating": 4.5,
             "review_text": "A dream suite for a romantic getaway."
           }
         ],
-        "room_image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "room_image": "https://i.ibb.co/sCRpkgQ/patrick-robert-doyle-AH8z-KXq-FITA-unsplash.jpg"
       },
       {
-        "room_description": "Luxury Suite with Hills view",
+        "room_description": "The Regal Manor Room",
         "price_per_night": 490,
         "room_size": "600 sq. ft",
         "availability": false,
         "room_images": [
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-          "https://images.unsplash.com/photo-1623718649591-311775a30c43?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          "https://i.ibb.co/jgn3sR7/jesse-gardner-Ow-Wb-UOIbh-DY-unsplash.jpg",
+          "https://i.ibb.co/tCYKWgY/mp-f-V2d-M2-Wv-Kv-E-unsplash.jpg",
+          "https://i.ibb.co/Ryvnqcb/mark-champs-Id2-IIl1j-OB0-unsplash.jpg"
         ],
-        "special_offers": [
-            {
-              "offer_title": "20% Off for Weeklong Stays",
-              "offer_description": "Book a weeklong stay and get 20% off your total bill."
-            },
-            {
-              "offer_title": "Early Bird Discount",
-              "offer_description": "Book your stay 30 days in advance and get 15% off."
-            }
-          ],
+        "special_offers": true,
         "reviews": [
           {
-            "user_name": "Emily Johnson",
+            "user_name": "Emison",
             "rating": 4,
             "review_text": "The suite was fabulous, but I wish it was available during my preferred dates."
           },
           {
-            "user_name": "David Williams",
+            "user_name": "Dav ams",
             "rating": 4.5,
             "review_text": "A dream suite for a romantic getaway."
           }
         ],
-        "room_image": "https://images.unsplash.com/photo-1445019980597-93fa8acb246c?q=80&w=2074&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+        "room_image": "https://i.ibb.co/w6mQ62Q/point3d-commercial-imaging-ltd-5-BV56-Sdv-Lmo-unsplash.jpg"
       }
     ]
   

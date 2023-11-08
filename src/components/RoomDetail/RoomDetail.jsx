@@ -61,7 +61,7 @@ const RoomDetail = ({ roomDetails }) => {
                 <p className="text-lg my-2">{room_details}</p>
               </div>
             </div>
-            <Reviews></Reviews>
+            <Reviews _id={_id}></Reviews>
           </div>
           <div className="">
             <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box ">

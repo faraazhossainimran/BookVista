@@ -1,3 +1,4 @@
+import moment from "moment/moment";
 import { Link } from "react-router-dom";
 
 const Room = ({room}) => {

@@ -6,8 +6,6 @@ import RoomsCarousel from "../../components/RoomsCarousel/RoomsCarousel";
 import { useLoaderData } from "react-router-dom";
 const Rooms = () => {
   const roomsData = useLoaderData()
-  
-  console.log('from database', roomsData);
   return (
     <div>
       <div className="container mx-auto py-12">

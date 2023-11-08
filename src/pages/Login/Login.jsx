@@ -40,7 +40,7 @@ const Login = () => {
     <div className="hero"
     style={{
       backgroundImage:
-        "url(https://images.unsplash.com/photo-1618773928121-c32242e63f39?auto=format&fit=crop&q=80&w=2070&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D)",
+        "url(https://i.ibb.co/S7Ksy4T/Screenshot-2023-11-08-185958.png)",
     }}>
       <div className="card glass my-16">
         <div className="hero-content w-[400px] flex-col">
@@ -74,7 +74,7 @@ const Login = () => {
                 />
               </div>
               <div className="form-control mt-6">
-              <input type="submit" className="b-0 p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" value="Login"/>
+              <input type="submit" className="btn b-0 p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold" value="Login"/>
               </div>
             </form>
             <p className="py-4 text-center text-lg -mt-8">
