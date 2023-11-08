@@ -28,11 +28,15 @@ const NavBar = () => {
         <Link to={"/"}>Home</Link>
       </li>
       <li className="text-xl">
+        <Link to={"/about"}>About Us</Link>
+      </li>
+      <li className="text-xl">
         <Link to={"/rooms"}>Rooms</Link>
       </li>
       <li className="text-xl">
         <Link to={"/bookings"}>My Bookings</Link>
       </li>
+
     </>
   );
   return (
