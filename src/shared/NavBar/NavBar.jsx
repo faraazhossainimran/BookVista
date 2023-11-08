@@ -74,7 +74,7 @@ const NavBar = () => {
               {navLinks}
             </ul>
           </div>
-          <a className="btn btn-ghost normal-case text-2xl ml-8">
+          <a className="btn btn-ghost normal-case text-xl md:text-2xl md:ml-8">
             <Link to={"/"}>BookVista</Link>
           </a>
         </div>
@@ -86,7 +86,7 @@ const NavBar = () => {
           {user ? (
             <div className="flex">
               <div className="flex">
-                <h3 className="mt-3 text-xl font-semibold mr-4">
+                <h3 className=" mt-5 md:mt-3 md:text-xl font-semibold mr-2 md:mr-4">
                   {user?.displayName || "User"}
                 </h3>
                 <div className="avatar online mr-4">
@@ -98,8 +98,8 @@ const NavBar = () => {
                   </div>
                 </div>
               </div>
-              <a className="p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold">
-                <Link onClick={handleLogOut} >Sign Out</Link>
+              <a className="p-2 md:p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold">
+                <Link onClick={handleLogOut} >SignOut</Link>
               </a>
             </div>
           ) : (

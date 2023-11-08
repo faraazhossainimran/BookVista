@@ -13,8 +13,8 @@ const Rooms = () => {
         <meta charSet="utf-8" />
         <title>Rooms - Bookvista</title>
       </Helmet>
-      <div className="container mx-auto py-12">
-        <div className="grid grid-cols-2 gap-4 content-center">
+      <div className="container mx-auto md:py-12">
+        <div className="grid md:grid-cols-2 gap-4 content-center">
           {roomsData.map((room) => (
             <Room key={room.room_id} room={room}></Room>
           ))}

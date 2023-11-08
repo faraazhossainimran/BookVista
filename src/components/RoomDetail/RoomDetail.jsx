@@ -42,10 +42,10 @@ const RoomDetail = ({ roomDetails }) => {
   };
   return (
     <div>
-      <div className="container mx-auto pt-12  w-[1200px]">
+      <div className="container mx-auto pt-12 md:w-[1200px]">
         {/* <p className="text-center py-2 text-xl">Size: {room_size}</p> */}
-        <div className="grid grid-cols-4 gap-6">
-          <div className="col-span-3 ">
+        <div className="grid md:grid-cols-4 m-2 gap-6">
+          <div className="md:col-span-3 ">
             <div className=" card-compact p-4 bg-[#f5f5fe] ">
               <figure>
                 <img
@@ -64,7 +64,7 @@ const RoomDetail = ({ roomDetails }) => {
             <Reviews _id={_id}></Reviews>
           </div>
           <div className="">
-            <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box ">
+            <ul className="menu bg-[#f5f5fe] m-2 md:w-96 rounded-box ">
               <li className="text-2xl font-semibold p-2">{room_description}</li>
               <li>
                 <span className="font-semibold text-lg">
@@ -85,7 +85,7 @@ const RoomDetail = ({ roomDetails }) => {
                 Book Now
               </Link>
             </ul>
-            <ul className="menu bg-[#f5f5fe] md:w-96 rounded-box mt-12 ">
+            <ul className="menu bg-[#f5f5fe] m-2 md:w-96 rounded-box mt-12 ">
               <li className="text-2xl font-semibold p-2">Need Assistant?</li>
               <li>
                 <span className="font-semibold text-lg">

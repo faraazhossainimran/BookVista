@@ -47,7 +47,7 @@ const Reviews = ({ _id }) => {
   };
 
   return (
-    <div className="my-6">
+    <div className="my-6 m-2">
       <h2 className="text-3xl font-semibold py-6 flex">
         <AiFillStar className="text-4xl text-amber-500 mr-2"></AiFillStar>
         Total Reviews: {postedReviews?.reviews?.length}

@@ -5,11 +5,11 @@ const Review = ({review}) => {
     const defaultImage = "https://i.ibb.co/j6TjQfR/7309681.jpg";
   return (
     <div>
-      <div className="bg-[#f5f5fe] p-6">
+      <div className="bg-[#f5f5fe] p-2 md:p-6">
         <div>
           <div className="flex">
             <div className="avatar">
-              <div className="w-[70px] rounded-full">
+              <div className="w-[70px] md:w-[70px] rounded-full">
                 <img src={defaultImage} />
               </div>
             </div>

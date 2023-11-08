@@ -7,11 +7,11 @@ const Room = ({room}) => {
     <div>
       <div className="relative">
           <img
-          className="h-[600px] object-cover"
+          className="md:h-[600px] object-cover"
             src={room_image}
             alt={`image of ${room_description}`}
           />
-        <div className="absolute top-0 h-[600px] bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">
+        <div className="absolute top-0 md:h-[600px] bg-gradient-to-r from-[#151515] to-[rgba(21, 21, 21, 0.00)]">
           <h2 className="card-title mr-12 text-white font-bold text-3xl mt-4 ml-4">{room_description}</h2>
         <p className="text-white mt-2 ml-4 font-semibold text-xl">Price Per night: ${price_per_night}</p>
           <div className="card-actions">
