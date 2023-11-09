@@ -24,7 +24,7 @@ const RoomDetail = ({ roomDetails }) => {
       userEmail,
     };
     console.log(bookedRoom);
-    fetch("http://localhost:5000/bookings", {
+    fetch("https://coffee-store-server-sepia.vercel.app/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -35,7 +35,7 @@ const RoomDetail = ({ roomDetails }) => {
       .then((data) => {
         Swal.fire(
           'Room Booked!',
-          `You have booked ${bookedRoom_room_description} which cost $ ${bookedRoom_Price_per_night}`,
+          `You have booked the room`,
           'success'
         )
       });

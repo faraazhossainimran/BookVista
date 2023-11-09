@@ -4,7 +4,7 @@ import FeaturedRoom from '../../components/FeaturedRoom/FeaturedRoom'
 const FeaturedRooms = () => {
     const [featuredRooms, setFeaturedRooms] = useState([])
     useEffect(()=>{
-        fetch('http://localhost:5000/rooms')
+        fetch('https://coffee-store-server-sepia.vercel.app/rooms')
         .then(res => res.json())
         .then(data => {
             setFeaturedRooms(data)

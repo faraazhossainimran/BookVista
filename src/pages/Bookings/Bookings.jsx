@@ -6,9 +6,9 @@ import { AuthContext } from "../../providers/AuthProviders";
 const Bookings = () => {
   const { user } = useContext(AuthContext);
   const [bookingsDetails, setBookingsDetails] = useState([]);
-  const url = `http://localhost:5000/bookings?email=${user?.email}`;
+  const url = `https://coffee-store-server-sepia.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
-    fetch(url, {credentials: 'include'})
+    fetch(url,)
       .then((res) => res.json())
       .then((data) => {
         setBookingsDetails(data);
@@ -25,7 +25,7 @@ const Bookings = () => {
       /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "", "success");
-        fetch(`http://localhost:5000/bookings/${id}`, {
+        fetch(`https://coffee-store-server-sepia.vercel.app/bookings/${id}`, {
           method: "DELETE",
         })
           .then((res) => res.json())
@@ -44,7 +44,6 @@ const Bookings = () => {
       }
     });
   };
-  console.log(bookingsDetails);
   // const noRoomBook =
   //   <>
 

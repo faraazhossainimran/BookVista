@@ -51,7 +51,7 @@ const About = () => {
               booking experience. Our mission is to inspire wanderlust and
               facilitate seamless travel arrangements.
             </p>
-            <button className="md:mt-6 md:ml-20">
+            <button className="md:mt-4 mb-2 md:ml-20">
               <Link
                 className="btn b-0 p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold"
                 to={"/signup"}
