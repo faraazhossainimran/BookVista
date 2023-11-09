@@ -15,7 +15,7 @@ const Room = ({room}) => {
           <h2 className="card-title mr-12 text-white font-bold text-3xl mt-4 ml-4">{room_description}</h2>
         <p className="text-white mt-2 ml-4 font-semibold text-xl">Price Per night: ${price_per_night}</p>
           <div className="card-actions">
-            <button className="text-white font-semibold mt-8 ml-4 p-2 md:border-4"><Link to={`https://coffee-store-server-sepia.vercel.approoms/${_id}`}>See More Details</Link></button>
+            <button className="text-white font-semibold mt-8 ml-4 p-2 md:border-4"><Link to={`/rooms/${_id}`}>See More Details</Link></button>
           </div>
         </div>
         <div>

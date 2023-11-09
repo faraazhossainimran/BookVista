@@ -1,5 +1,4 @@
 const RoomDetailsCarousel = ({ roomDetails }) => {
-  console.log(roomDetails.room_images);
   return (
     <div className="py-4">
       <div className="relative">

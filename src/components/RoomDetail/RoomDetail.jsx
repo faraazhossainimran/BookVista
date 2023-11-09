@@ -23,8 +23,8 @@ const RoomDetail = ({ roomDetails }) => {
       bookedRoom_size: room_size,
       userEmail,
     };
-    console.log(bookedRoom);
-    fetch("https://coffee-store-server-sepia.vercel.app/bookings", {
+    // console.log(bookedRoom);
+    fetch("https://bookvista-server-with-jwt.vercel.app/bookings", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -79,7 +79,11 @@ const RoomDetail = ({ roomDetails }) => {
               </li>
               <Link
                 className="btn p-4 rounded-lg bg-gradient-to-r from-violet-500 to-fuchsia-500 b-0 text-white font-semibold"
-                onClick={() => handleRoomBooking()}
+                onClick={() => {
+                  if (user?.email) {
+                    handleRoomBooking();
+                  }
+                }}
                 to={user?.email ? "/bookings" : "/login"}
               >
                 Book Now

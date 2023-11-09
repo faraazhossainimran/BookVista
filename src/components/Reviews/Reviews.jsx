@@ -8,7 +8,7 @@ AiFillStar;
 const Reviews = ({ _id }) => {
   const {user} = useContext(AuthContext)
   const [postedReviews, setPostedReviews] = useState([]);
-  const url = `https://coffee-store-server-sepia.vercel.app/reviews/${_id}`;
+  const url = `https://bookvista-server-with-jwt.vercel.app/reviews/${_id}`;
   useEffect(() => {
     fetch(url)
       .then((res) => res.json())
@@ -29,7 +29,7 @@ const Reviews = ({ _id }) => {
       userPhoto,
       review_text,
     };
-    fetch(`https://coffee-store-server-sepia.vercel.app/bookings/${_id}`, {
+    fetch(`https://bookvista-server-with-jwt.vercel.app/bookings/${_id}`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
