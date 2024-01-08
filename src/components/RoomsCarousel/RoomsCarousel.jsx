@@ -1,6 +1,15 @@
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from 'react';
 const RoomsCarousel = () => {
+  useEffect(()=> {
+    Aos.init({duration: 1200})
+  })
+  useEffect(()=> {
+    Aos.init({duration: 1200})
+  },[])
   return (
-    <div className="relative">
+    <div className="relative" data-aos="fade-up">
       <div className="carousel grid md:grid-cols-4 carousel-center">
         <div className="carousel-item relative">
           <img

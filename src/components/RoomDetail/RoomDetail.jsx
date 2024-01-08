@@ -33,6 +33,7 @@ const RoomDetail = ({ roomDetails }) => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         Swal.fire(
           'Room Booked!',
           `You have booked the room`,

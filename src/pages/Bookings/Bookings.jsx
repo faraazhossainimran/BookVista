@@ -6,9 +6,10 @@ import { AuthContext } from "../../providers/AuthProviders";
 const Bookings = () => {
   const { user } = useContext(AuthContext);
   const [bookingsDetails, setBookingsDetails] = useState([]);
+  // const [bookings, setBookings] = useState(bookingsDetails)
   const url = `https://bookvista-server-with-jwt.vercel.app/bookings?email=${user?.email}`;
   useEffect(() => {
-    fetch(url,)
+    fetch(url)
       .then((res) => res.json())
       .then((data) => {
         setBookingsDetails(data);
@@ -22,7 +23,6 @@ const Bookings = () => {
       confirmButtonText: "Yes",
       denyButtonText: `Not Now`,
     }).then((result) => {
-      /* Read more about isConfirmed, isDenied below */
       if (result.isConfirmed) {
         Swal.fire("Deleted!", "", "success");
         fetch(`https://bookvista-server-with-jwt.vercel.app/bookings/${id}`, {
@@ -31,6 +31,7 @@ const Bookings = () => {
           .then((res) => res.json())
           .then((data) => {
             console.log(data);
+            console.log("bookings details", bookingsDetails);
             const remainingBookings = bookingsDetails.filter(
               (booking) => booking._id !== id
             );
@@ -56,7 +57,7 @@ const Bookings = () => {
         <meta charSet="utf-8" />
         <title>My Bookings</title>
       </Helmet>
-      {bookingsDetails > 0 ? (
+      {/* {bookings !== 0 ? ( */}
         <>
           <div className="overflow-x-auto">
             <table className="table">
@@ -84,11 +85,12 @@ const Bookings = () => {
             </table>
           </div>
         </>
-      ) : (
+       {/* ) : (
         <h1 className="text-3xl text-center">
           No rooms booked yet. Please book a room
         </h1>
-      )}
+      )
+      }  */}
     </div>
   );
 };

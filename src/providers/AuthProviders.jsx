@@ -48,18 +48,18 @@ const AuthProviders = ({children}) => {
       setUser(currentUser);
       setLoading(false);
     //   if user exist provide a token
-    if(currentUser){
-        axios.post("https://bookvista-server-with-jwt.vercel.app/jwt",loggedUser, {withCredentials: true})
-        .then(res => {
-            console.log("token response", res.data);
-        })
+    // if(currentUser){
+    //     axios.post("https://bookvista-server-with-jwt.vercel.app/jwt",loggedUser, {withCredentials: true})
+    //     .then(res => {
+    //         console.log("token response", res.data);
+    //     })
         
-    }
-    else {
-        axios.post('https://bookvista-server-with-jwt.vercel.app/logout', loggedUser, {
-            withCredentials: true
-        })
-    }
+    // }
+    // else {
+    //     axios.post('https://bookvista-server-with-jwt.vercel.app/logout', loggedUser, {
+    //         withCredentials: true
+    //     })
+    // }
     });
 
     return () => {
